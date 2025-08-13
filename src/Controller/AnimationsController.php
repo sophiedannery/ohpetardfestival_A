@@ -23,4 +23,12 @@ final class AnimationsController extends AbstractController
             'controller_name' => 'SportsController',
         ]);
     }
+
+    #[Route('/animations/tracto', name: 'app_tracto')]
+    public function tracto(): Response
+    {
+        return $this->render('animations/tracto.html.twig', [
+            'controller_name' => 'SportsController',
+        ]);
+    }
 }

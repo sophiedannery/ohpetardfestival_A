@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tracto'sono
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-animations.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-animations.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="billetterie-page text-center py-5">
+
+		<div class="container">
+
+			<h1 class="fw-bold display-5 mb-3">Tracto'sono</h1>
+
+			<p>
+				Véritable icône du Oh Pétard Festival, la Tracto’sono est un ancien tracteur entièrement sonorisé et customisé pour l’occasion. Mi-machine agricole, mi-scène musicale, elle symbolise parfaitement l’esprit du festival&nbsp;: un joyeux mélange de ruralité, de créativité et de fête urbaine.
+			</p>
+
+			<h2 class="mt-5">Animation décoration</h2>
+			<p>
+				Le samedi de
+				<strong>14h à 18h</strong>, rejoignez-nous Grand Rue pour donner vie à la Tracto’sono&nbsp;! Armés de pinceaux, de couleurs et d’imagination, petits et grands sont invités à participer à sa décoration.
+
+			</p>
+
+			<h2 class="mt-5">Musique nomade</h2>
+			<p>
+				Une fois décorée, la Tracto’sono prend la route dès
+				<strong>19h</strong>&nbsp;: elle diffusera musique et bonne humeur en parcourant le centre de Buis-les-Baronnies, de la
+				<strong>Place aux Herbes</strong>
+				jusqu’à
+				<strong>La Palun</strong>, où débutera le concert du soir. Suivez-la, dansez derrière elle, et laissez-vous porter par son énergie jusqu’à la scène&nbsp;!
+			</p>
+
+			<div class="mt-5">
+				<img src="{{ asset('assets/images/tracteur.png') }}" alt="Illustration tracteur" class="img-fluid d-bloc mx-auto billetterie-image">
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="zones-texte bandeau-good-inscription py-3 text-center">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+			<span class="event">good food</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="spot">good ride</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="sector">good music</span>
+		</h3>
+	</section>
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_anim_prog')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+{% endblock %}

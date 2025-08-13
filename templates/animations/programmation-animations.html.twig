@@ -13,6 +13,25 @@
 		<img src="{{ asset('assets/images/hero-mobile-animations.png')}}" alt="Oh Pétard Festival">
 	</section>
 
+	{# --- Intro animations --- #}
+	<section class="programme-section py-4">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-10">
+					<div class=" text-center mb-0">
+						<p class="mb-0">
+							Parce qu’un festival, ce n’est pas seulement de la musique et du sport, mais aussi des moments de curiosité, de créativité et de partage, Oh Pétard vous a concocté une ribambelle d’animations aussi ludiques que conviviales. Des ateliers pour exprimer votre imagination, des jeux pour petits et grands, et des rendez-vous festifs qui rassemblent toute la ville dans une ambiance unique. Et le meilleur dans tout ça&nbsp;? Elles sont
+							<strong>gratuites</strong>
+							et ouvertes à
+							<strong>tous les âges</strong>
+							!
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="programme-section py-5">
 		<div class="container">
 			<div
@@ -36,7 +55,10 @@
 							<span class="prog-horaire me-2">19h15</span><br class="d-block d-md-none">
 							Diffusion du film
 							<em>Demain la vallée</em>
-							(1h04min) de Jérôme Prudent, suivi d'un échange autour du film.</p>
+							(1h04min) de Jérôme Prudent, suivi d'un échange autour du film.
+							<em>Tarif habituel
+							</em>
+						</p>
 						<p class="prog-event-location m-0">📍 Cinéma le Reg'Art</p>
 						<a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a>
 					</div>
@@ -65,15 +87,21 @@
 				<div class="col-12 col-md-8 px-4 mx-md-0">
 
 					<div class="prog-event mb-4  mt-5 mt-md-0">
-						<h5 class="prog-event-title mb-3">Chasse au trésor<br>
+						<h5 class="prog-event-title mb-3">Chasse aux p'tits trésors locaux<br>
 							<span class="prog-kid-friendly">KIDS FRIENDLY</span>
 						</h5>
 						<p class="m-0">
 							<span class="prog-horaire me-2">10h - 12h</span><br class="d-block d-md-none">
-							Une chasse au trésor pour petits et grands... surprises garanties !
+							Une chasse aux trésors pour petits et grands... surprises garanties !
 						</p>
-						<p class="prog-event-location m-0">📍 Rue Malgarni</p>
-						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a> #}
+						<p class="prog-event-location m-0">📍 Grand Rue</p>
+						<small class="text-small">
+							Inscriptions au
+							<strong>forum des assos</strong>
+							de Buis-les-Baronnies ou
+							<a href="{{ path('app_contact')}}" class="prog-event-link">contactez-nous</a>
+							!
+						</small>
 					</div>
 
 					<div class="prog-event mb-4  mt-5 ">
@@ -82,8 +110,8 @@
 							<span class="prog-horaire me-2">11h - 18h</span><br class="d-block d-md-none">
 							Assistez à la naissance de la Cuvée Oh Pétard ! Vin pressé sur place, 100% ambiance du festival
 						</p>
-						<p class="prog-event-location m-1">📍 Rue Malgarni</p>
-						<a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a>
+						<p class="prog-event-location m-1">📍 Grand Rue</p>
+						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a> #}
 					</div>
 
 					<div class="prog-event mb-4  mt-5 ">
@@ -92,14 +120,15 @@
 						</h5>
 						<p class="m-0">
 							<span class="prog-horaire me-2">14h - 18h</span><br class="d-block d-md-none">
-							À vos pinceaux et idées ! Customiser le Tracto'sono avant sa soirée musicale.
+							À vos pinceaux et idées ! Customiser la Tracto'sono avant sa soirée musicale.
 						</p>
-						<p class="prog-event-location m-0">📍 Rue Malgarni, Place du marché</p>
-						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a> #}
+						<p class="prog-event-location m-0">📍 Grand Rue, Place du marché</p>
+						<a href="{{ path('app_tracto')}}" class="prog-event-link mt-2">C'est quoi la Tracto'sono ?</a>
+
 					</div>
 
 					<div class="prog-event mb-4  mt-5 ">
-						<h5 class="prog-event-title mb-3">Show Trial<br>
+						<h5 class="prog-event-title mb-3">Show VTT Trial<br>
 							{# <span class="prog-kid-friendly">KIDS FRIENDLY</span> #}
 						</h5>
 						<p class="m-0">
@@ -107,7 +136,7 @@
 							Démonstration de trial à couper le souffle.
 						</p>
 						<p class="prog-event-location m-0">📍 La Palun</p>
-						<a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a>
+						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a> #}
 					</div>
 
 
