@@ -1,0 +1,239 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions légales
+{% endblock %}
+
+{% block body %}
+	<section class="programme-section py-5">
+		<div class="container">
+			<header class="mb-4 text-center">
+				<h1 class="mb-2">Mentions légales</h1>
+				<p class="text-muted mb-0">Dernière mise à jour :
+					{{ "now"|date("d/m/Y") }}</p>
+			</header>
+
+			{# Sommaire #}
+			<nav aria-label="Sommaire des mentions légales" class="mb-4">
+				<ul class="list-inline text-center m-0">
+					<li class="list-inline-item">
+						<a href="#editeur">Éditeur du site</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#hebergeur">Hébergeur</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#domaine">Nom de domaine</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#propriete">Propriété intellectuelle</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#donnees">Données personnelles (RGPD)</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#cookies">Cookies</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#liens">Liens externes</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#responsabilites">Responsabilités</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#droit">Droit applicable</a>
+					</li>
+
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#credits">Crédits</a>
+					</li>
+					<li class="list-inline-item">•</li>
+					<li class="list-inline-item">
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<hr class="my-4">
+
+			<section id="editeur" class="mb-5">
+				<h2 class="h4 mb-3">Éditeur du site</h2>
+				<p>
+					Site :
+					<strong>ohpetardfestival.com</strong><br>
+					Éditeur / Responsable de la publication :
+					<strong>Association Oh Pétard&nbsp;!</strong>
+					(loi 1901)<br>
+					SIRET :
+					<strong>941&nbsp;289&nbsp;860&nbsp;00012</strong>
+				</p>
+				<address class="mb-2">
+					Siège social :
+					<strong>374 Route de Buis-les-Baronnies, 26170 La Roche-sur-le-Buis</strong><br>
+					Responsable de la publication :
+					<strong>Charline Vial‑Jaime</strong><br>
+					Email :
+																				asso.ohpetard@gmail.com
+				</address>
+			</section>
+
+			<section id="hebergeur" class="mb-5">
+				<h2 class="h4 mb-3">Hébergeur</h2>
+				<p class="mb-2">
+					Hébergement applicatif :
+					<strong>Heroku</strong>
+					(Salesforce)<br>
+					Adresse Europe :
+					<strong>Salesforce UK Limited</strong>, Floor 26 Salesforce Tower, 110 Bishopsgate, London, EC2N 4AY, Royaume‑Uni.<br>
+					Signalement d’abus (Heroku) :
+					<a href="mailto:heroku-abuse@salesforce.com">heroku-abuse@salesforce.com</a>
+				</p>
+				<p class="text-muted mb-0">
+					Heroku est une plateforme de cloud opérée par Salesforce. Pour les aspects sécurité/regions, se référer à la documentation Heroku.
+				</p>
+			</section>
+
+			<section id="domaine" class="mb-5">
+				<h2 class="h4 mb-3">Nom de domaine</h2>
+				<p class="mb-0">
+					Registrar :
+					<strong>OVH SAS</strong>
+					— 2 rue Kellermann, 59100 Roubaix, France — RCS Lille Métropole 424&nbsp;761&nbsp;419.<br>
+					Site :
+					<a href="https://www.ovhcloud.com/fr/" target="_blank" rel="noopener">ovhcloud.com</a>
+				</p>
+			</section>
+
+			<section id="propriete" class="mb-5">
+				<h2 class="h4 mb-3">Propriété intellectuelle</h2>
+				<p>
+					L’ensemble des contenus du site (textes, visuels, logos, éléments graphiques, vidéos, sons, structure et charte graphique)
+																				        est protégé par le droit de la propriété intellectuelle. Toute reproduction, représentation, modification, publication,
+																				        adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans
+																				        autorisation écrite préalable de l’éditeur.
+				</p>
+				<p class="mb-0">
+					Les marques et logos éventuellement cités restent la propriété de leurs titulaires respectifs.
+				</p>
+			</section>
+
+			<section id="donnees" class="mb-5">
+				<h2 class="h4 mb-3">Données personnelles (RGPD)</h2>
+				<p>
+					L’association Oh Pétard&nbsp;! collecte uniquement les données nécessaires à la gestion du festival (ex. formulaires de contact,
+																				        inscriptions ponctuelles, informations pratiques). Les bases légales sont l’exécution d’un contrat, l’intérêt légitime
+																				        de l’association ou votre consentement lorsque nécessaire.
+				</p>
+				<ul>
+					<li>
+						<strong>Données traitées :</strong>
+						identité, coordonnées, contenu des messages, informations d’inscription si applicable.</li>
+					<li>
+						<strong>Finalités :</strong>
+						gestion des demandes, organisation des activités, informations pratiques.</li>
+					<li>
+						<strong>Destinataires :</strong>
+						équipe organisatrice et prestataires techniques nécessaires.</li>
+					<li>
+						<strong>Durées de conservation :</strong>
+						limitées à la réalisation de l’événement et aux obligations légales.</li>
+				</ul>
+				<p class="mb-0">
+					Vous disposez des droits d’accès, de rectification, d’effacement, d’opposition, de limitation et de portabilité.
+																				        Pour les exercer :
+																				asso.ohpetard@gmail.com. Vous pouvez également saisir la CNIL.
+				</p>
+			</section>
+
+			<section id="cookies" class="mb-5">
+				<h2 class="h4 mb-3">Cookies</h2>
+				<p class="mb-0">
+					Le site
+					<strong>n’utilise pas de cookies ni autres traceurs</strong>
+					soumis au consentement. Seuls des éléments strictement nécessaires
+																				        au fonctionnement technique du site peuvent être chargés (sans collecte de données à des fins publicitaires ou d’audience).
+				</p>
+			</section>
+
+			<section id="liens" class="mb-5">
+				<h2 class="h4 mb-3">Liens externes</h2>
+				<p class="mb-0">
+					Le site peut contenir des liens vers des sites tiers. L’association Oh Pétard&nbsp;! ne peut être tenue responsable du contenu,
+																				        des produits ou des services proposés sur ces sites, ni de leur conformité légale.
+				</p>
+			</section>
+
+			<section id="responsabilites" class="mb-5">
+				<h2 class="h4 mb-3">Responsabilités</h2>
+				<p>
+					L’éditeur s’efforce de fournir des informations exactes et à jour. Toutefois, aucune garantie n’est apportée quant à
+																				        l’exhaustivité et l’actualité des contenus. Le site peut être temporairement indisponible pour maintenance ou mise à jour.
+				</p>
+				<p class="mb-0">
+					L’utilisateur s’engage à accéder au site avec un équipement récent, ne contenant pas de virus, et avec un navigateur de
+																				        dernière génération mis à jour.
+				</p>
+			</section>
+
+			<section id="droit" class="mb-5">
+				<h2 class="h4 mb-3">Droit applicable</h2>
+				<p class="mb-0">
+					Les présentes mentions légales sont soumises au droit français. En cas de litige, et à défaut d’accord amiable, les tribunaux
+																				        français seront seuls compétents.
+				</p>
+			</section>
+
+
+			<section id="credits" class="mb-5">
+				<h2 class="h4 mb-3">Crédits</h2>
+				<ul class="mb-0">
+					<li>Conception & rédaction :
+						<strong>Association Oh Pétard&nbsp;!</strong>
+					</li>
+					<li>Design & développement :
+						<strong>Sophie Alley</strong>
+					</li>
+					<li>Hébergement :
+						<strong>Heroku</strong>
+						— Domaines :
+						<strong>OVH</strong>
+					</li>
+					<li>Crédits photos / vidéos :
+						<ul class="mb-0">
+							<li>Photos :
+								<strong>Unsplash</strong>
+							</li>
+							<li>Illustrations :
+								<strong>Adhézif</strong>
+								(Buis‑les‑Baronnies) — droits acquis par l’association.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section id="contact" class="mb-5">
+				<h2 class="h4 mb-3">Contact</h2>
+				<p class="mb-2">Pour toute question concernant ces mentions, vous pouvez nous contacter :</p>
+				<address class="mb-0">
+					Email :
+																				asso.ohpetard@gmail.com<br>
+					Adresse postale : 374 Route de Buis-les-Baronnies, 26170 La Roche-sur-le-Buis
+				</address>
+			</section>
+
+			<div class="text-center mt-4">
+				<a href="{{ path('app_home') }}">
+					<button class="btn btn-outline-primary">Retour</button>
+				</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}
