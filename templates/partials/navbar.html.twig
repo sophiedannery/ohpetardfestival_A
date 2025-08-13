@@ -42,22 +42,30 @@
 
 				<!-- Autres liens -->
 				<li class="nav-item">
-					<a class="nav-link" href="{{ path('app_billeterie') }}" data-turbo="false">BILLETERIE</a>
+					<a class="nav-link" href="{{ path('app_billeterie') }}" data-turbo="false">BILLETERIE LA PALUN</a>
 				</li>
+
 				<li class="nav-item">
-					<a class="nav-link" href="#agriculture" data-turbo="false">OH PÉTARD !</a>
+					<a class="nav-link" href="{{ path('app_rider_registration') }}" data-turbo="false">INSCRIPTIONS SPORTIVES</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#animations" data-turbo="false">INFOS PRATIQUES</a>
-				</li>
+
+				{# <li class="nav-item">
+													<a class="nav-link" href="#agriculture" data-turbo="false">OH PÉTARD !</a>
+												</li> #}
+
+				{# <li class="nav-item">
+													<a class="nav-link" href="#animations" data-turbo="false">INFOS PRATIQUES</a>
+												</li> #}
+
 			</ul>
 
 			<!-- Bouton inscription -->
-			<div class="d-flex">
-				<a href="{{ path('app_rider_registration') }}" class="btn btn-primary ms-lg-3" data-turbo="false">
-					INSCRIPTION
-				</a>
-			</div>
+			{# <div class="d-flex">
+							<a href="{{ path('app_rider_registration') }}" class="btn btn-primary ms-lg-3" data-turbo="false">
+								INSCRIPTIONS SPORTIVES
+							</a>
+						</div> #}
+
 		</div>
 	</div>
 </nav>
