@@ -36,18 +36,19 @@
 
 			<div class="col-md-3 mb-3 mb-md-0 d-flex flex-column">
 				<h5 class="mb-1 fw-bold">Le festival</h5>
-				<a href="#" class="small-text">Infos Pratiques</a>
-				<a href="#" class="small-text">Qui sommes nous ?</a>
-				<a href="{{ path('app_billeterie') }}" class="small-text">Billeterie</a>
+				{# <a href="#" class="small-text">Infos Pratiques</a> #}
+				{# <a href="#" class="small-text">Qui sommes nous ?</a> #}
+				<a class="small-text" href="https://www.helloasso.com/associations/association-oh-petard/evenements/concert-oh-petard-festival?_gl=1%2ansd0f6%2a_gcl_au%2aNTEwNTE3MDEyLjE3NTQ0NjM2MDYuMzQ5NzY4NjQ5LjE3NTUxMjAwMDMuMTc1NTEyMDAwMg" target="_blank" rel="noopener noreferrer">
+					Billeterie La Palun</a>
 				<a href="{{ path('app_rider_registration') }}" class="small-text">Inscription riders</a>
-				<a href="#" class="small-text">Partenaires</a>
+				{# <a href="#" class="small-text">Partenaires</a> #}
 			</div>
 
 			<div class="col-md-3 mb-3 mb-md-0 d-flex flex-column">
 				<h5 class="mb-1 fw-bold">Infos</h5>
 				<a href="{{ path('app_contact')}}" class="small-text">Contact</a>
-				<a href="#" class="small-text">Mentions légales</a>
-				<a href="#" class="small-text">Politique de confidentialité</a>
+				<a href="{{ path('app_mentions_legales')}}" class="small-text">Mentions légales</a>
+				<a href="{{ path('app_politique_conf')}}" class="small-text">Politique de confidentialité</a>
 			</div>
 		</div>
 

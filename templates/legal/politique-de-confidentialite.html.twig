@@ -1,0 +1,163 @@
+{# templates/pages/privacy.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Politique de confidentialité
+{% endblock %}
+
+{% block body %}
+
+	<section class="programme-section py-5">
+		<div class="container">
+			<header class="mb-4 text-center">
+				<h1 class="mb-2">Politique de Confidentialité</h1>
+				<p class="text-muted mb-0">Dernière mise à jour :
+					{{ "now"|date("d/m/Y") }}</p>
+			</header>
+
+			<p>
+				La présente politique décrit comment l’Association
+				<strong>Oh Pétard !</strong>
+				collecte et traite vos données
+														    personnelles dans le cadre du site
+				<strong>ohpetardfestival.com</strong>
+				(le « Site ») et des services proposés
+														    pendant le festival Oh Pétard Festival.
+			</p>
+
+			<hr class="my-4">
+
+			<h2 id="identite">Responsable du traitement</h2>
+			<p class="mb-2">
+				<strong>Association Oh Pétard !</strong><br>
+				374 Route de Buis-les-Baronnies, 26170 La Roche‑sur‑le‑Buis, France<br>
+				SIRET : 941 289 860 00012<br>
+				Contact :
+														asso.ohpetard@gmail.com
+			</p>
+
+			<h2 id="donnees">Quelles données nous collectons</h2>
+			<ul>
+				<li>
+					<strong>Inscriptions bénévoles</strong>
+					: identité, coordonnées, disponibilités, préférences de mission.</li>
+				<li>
+					<strong>Inscriptions riders / billetterie</strong>
+					(via des services tiers, ex. HelloAsso) :
+																		      identité, coordonnées, informations sportives nécessaires (catégorie, licence le cas échéant),
+																		      informations de paiement gérées par le prestataire.</li>
+
+			</ul>
+
+			<h2 id="finalites">Finalités et bases légales</h2>
+			<ul>
+
+				<li>
+					<strong>Gérer les inscriptions bénévoles et riders</strong>, l’organisation des activités et la sécurité de l’évènement —
+					<em>exécution de mesures précontractuelles / contractuelles</em>.</li>
+				<li>
+					<strong>Assurer le bon fonctionnement, la sécurité et la maintenance du Site</strong>
+					—
+					<em>intérêt légitime</em>.</li>
+				<li>
+					<strong>Obligations légales</strong>
+					(comptable, assurance, sécurité) —
+					<em>obligation légale</em>.</li>
+				<li>
+					<strong>Communication associative</strong>
+					(news liées au festival) —
+					<em>intérêt légitime</em>
+					; vous pouvez vous opposer à tout moment.</li>
+			</ul>
+
+			<h2 id="cookies">Cookies & traceurs</h2>
+			<p>
+				Nous n’utilisons
+				<strong>pas</strong>
+				de cookies de suivi, analytics ou publicitaires.
+														    Seuls des cookies techniques,
+				<strong>strictement nécessaires</strong>
+				au fonctionnement du Site, peuvent être déposés.
+			</p>
+
+			<h2 id="durees">Durées de conservation</h2>
+			<ul>
+
+				<li>
+					<strong>Bénévoles</strong>
+					: pendant la préparation et la tenue du festival, puis jusqu’à 1 an après la fin de l’édition concernée (sauf obligations légales plus longues).</li>
+				<li>
+					<strong>Riders / billetterie</strong>
+					(chez le prestataire) : selon la politique du prestataire ; nous conservons en interne les informations organisationnelles nécessaires pour l’édition en cours puis jusqu’à 1 an.</li>
+
+
+			</ul>
+
+			<h2 id="destinataires">Destinataires & sous‑traitants</h2>
+			<p>
+				Accès limité aux personnes habilitées de l’association. Nous recourons à des prestataires :
+			</p>
+			<ul>
+				<li>
+					<strong>Hébergement</strong>
+					: Heroku (plateforme PaaS).
+				</li>
+				<li>
+					<strong>Nom de domaine / DNS</strong>
+					: OVH.</li>
+				<li>
+					<strong>Inscriptions & billetterie</strong>
+					: HelloAsso (et/ou plateforme indiquée sur la page « Billetterie »).
+																		      Les paiements sont traités par ces prestataires, qui agissent en qualité de responsables distincts pour la partie paiement.
+				</li>
+			</ul>
+			<p>
+				Ces prestataires s’engagent contractuellement à protéger vos données. Leurs politiques de confidentialité s’appliquent quand vous utilisez leurs formulaires ou effectuez un paiement.
+			</p>
+
+
+			<h2 id="droits">Vos droits</h2>
+			<p>
+				Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits d’<strong>accès</strong>,
+				<strong>rectification</strong>,
+				<strong>effacement</strong>,
+				<strong>limitation</strong>,
+				<strong>opposition</strong>
+				(y compris à la prospection), et
+				<strong>portabilité</strong>. Vous pouvez définir des directives post‑mortem.
+			</p>
+			<p>
+				Pour exercer vos droits :
+														asso.ohpetard@gmail.com, ou par courrier à :
+															    Association Oh Pétard !, 374 Route de Buis‑les‑Baronnies, 26170 La Roche‑sur‑le‑Buis.
+			</p>
+			<p>
+				Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez saisir la
+				<a href="https://www.cnil.fr/" target="_blank" rel="noopener noreferrer">CNIL</a>.
+			</p>
+
+			<h2 id="securite">Sécurité</h2>
+			<p>
+				Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables (chiffrement en transit, contrôle d’accès,
+														    sauvegardes, mises à jour logicielles) pour protéger vos données contre tout accès non autorisé, perte ou altération.
+			</p>
+
+			<h2 id="mineurs">Mineurs</h2>
+			<p>
+				Certaines animations sont ouvertes aux mineurs. Les inscriptions nécessitant des données sur des mineurs sont
+														    effectuées par un représentant légal. Nous pouvons demander un justificatif en cas de doute.
+			</p>
+
+			<h2 id="modifs">Modifications de la politique</h2>
+			<p>
+				Nous pouvons mettre à jour la présente politique pour tenir compte d’évolutions légales, techniques
+														    ou organisationnelles. La date de « Dernière mise à jour » en haut de page fait foi.
+			</p>
+
+			<div class="mt-5">
+				<a href="{{ path('app_home') }}">
+					<button class="btn btn-outline-primary">Retour</button>
+				</a>
+			</div>
+		</div>
+	</section>
+{% endblock %}
