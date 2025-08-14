@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Oh Pétard !
+{% endblock %}
+
+{% block body %}
+
+
+	<section class="section-contact restauration-content py-5 px-3">
+		<div class="container text-center">
+
+			<h4 class="text-center">L’association Oh Pétard, créée en février 2025, portera la première édition du « Oh Pétard festival », qui se déroulera à Buis-les-Baronnies les 26 et 27 septembre 2025.</h4>
+
+			<img src="{{ asset('assets/logos/Logo.png') }}" alt="Logo Oh Pétard" class=" text-center img-fluid mb-4" style="max-width: 250px;">
+
+			<p class="lead text-center" style="max-width: 800px; margin: 0 auto;">
+				Oh Pétard, c'est avant tout une aventure humaine ! Portée par une bonne bande de copains buxois, notre association a pour volonté de réunir les générations ! Nous avons su nous entourer de personnes incroyables et motivées pour organiser cet événement, créant une aventure unique, enrichissante pour chacun/chacune d'entre nous ! Cet événement original et novateur a pour vocation de créer du lien social et de dynamiser le territoire des Baronnies au travers de trois thématiques qui nous tiennent à cœur, le tout dans une ambiance festive, ludique et décalée ...
+				<br><br>Pendant le Oh Pétard festival, nous mettons en valeur l'agriculture et l'alimentation locale, les sports emblématiques des Baronnies et les musiques actuelles et montrer toutes les richesses de notre territoire lors d'un rendez-vous que l'on espère inoubliable (et quoi de mieux que de s'amuser tous ensemble pour rendre ce moment mémorable?)  !
+
+				<br>Le Oh Pétard festival se veut convivial et fédérateur tant pour les sportifs, les locaux, les artistes, les intervenants, nos bénévoles, ou encore les visiteurs venus d'ici ou d’ailleurs. Il est en quelque sorte le guide touristique du bien vivre buxois et invite à découvrir et redécouvrir le territoire le temps d’un week-end insolite.
+
+				<br><br>Notre devise :</p>
+
+			<section class="zones-texte bandeau-good py-3 text-center">
+				<h3 class="m-0 lineup-big d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
+					<span class="food">good food</span>
+					<span class="etoile d-none d-sm-inline">*</span>
+					<span class="ride">good ride</span>
+					<span class="etoile d-none d-sm-inline">*</span>
+					<span class="music">good music</span>
+				</h3>
+			</section>
+
+			<p class="mt-3">Ouvertes aux bonnes idées et à la discussion, n'hésitez pas à nous contacter ! 😉
+			</p>
+
+			<div class="row g-4 text-center mt-1">
+				<div class="col-12  mb-3 mb-md-0">
+					<i class="fa-solid fa-envelope" style="color: var(--color-pink);"></i>
+					<p style="color: var(--color-blue-dark);">asso.ohpetard@gmail.com</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section-adherer position-relative py-0 py-md-5 mb-5 mb-md-0">
+		<div class="container">
+
+			<div class="adhesion-box text-center p-5 p-md-5">
+				<h2 class="fw-bold mb-3">Rejoins-nous !</h2>
+				<p class="mb-4">
+					Vous voulez nous soutenir ou rejoindre l'équipe ?
+				</p>
+				<a href="https://www.helloasso.com/associations/association-oh-petard/adhesions/adhesion-association-oh-petard" class="text-uppercase btn btn-secondary me-2" target="_blank" rel="noopener noreferrer">Adhère à l'asso</a>
+				<a href="https://docs.google.com/forms/d/19NBb4TzEdwFG33s_4wIVZ9zybj-PkYp9rxBr82yKadA/viewform?edit_requested=true" class="text-uppercase btn btn-secondary" target="_blank" rel="noopener noreferrer">Deviens bénévole</a>
+			</div>
+
+			<img src="{{ asset('assets/images/micro.png')}}" alt="Illustration micro" class="illu-micro">
+
+		</div>
+	</section>
+
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_home')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+
+
+	<style>
+		.content-asso p {
+			line-height: 1.7;
+			color: var(--color-blue-dark);
+		}
+		.content-asso ul li {
+			margin: 0.25rem 0;
+		}
+		.bandeau-good-inscription {
+			background: var(--color-blue-extra-light, #f5f9ff);
+		}
+	</style>
+{% endblock %}
