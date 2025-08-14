@@ -23,4 +23,13 @@ final class MusiqueController extends AbstractController
             'controller_name' => 'SportsController',
         ]);
     }
+
+
+    #[Route('/musique/programmation2025', name: 'app_musique_prog_2025')]
+    public function progMusique2025(): Response
+    {
+        return $this->render('musique/programmation-musique-2025.html.twig', [
+            'controller_name' => 'SportsController',
+        ]);
+    }
 }
