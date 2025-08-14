@@ -1,0 +1,238 @@
+{# templates/artist/show.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Artiste —
+	{{ artist.name|default('Nom de l’artiste')|striptags }}
+{% endblock %}
+
+{% block body %}
+	{# === Données par défaut (au cas où rien n'est passé depuis le contrôleur) === #}
+	{% set artist = artist|default({
+  name: 'NaroSound',
+  photo: asset('assets/artistes/Narosound.jpg'),
+  alt: 'Photo de l’artiste',
+  time: '<span class="number">10h.16h</span>',
+  place: 'Place aux herbes',
+  price_value: '<span class="number">Gratuit</span>',
+  bio: "NaroQuoi ?!
+NaroSounD revisite les ambiances Sound System et Block Party en distillant ses classics tunes !
+Si le reggae et le hip hop en sont les éternelles racines, elles puisent dans le groove leurs sélections, créant cette danse fédératrice où toutes les tribus sont conviées.
+Musiques africaines traditionnelles, jazz, afrobeat, dub, soul, funk, ragga-dancehall... le mélange fait monter la vibe !
+Originaire des Baronnies Provençales, Djüll Narobians travaille depuis près de 15 ans à collecter ses pépites. D'un style à un autre, il joue avec la musique qui l'anime.
+Ils nous ont fait confiance : le comité des fêtes de La Roche sur le Buis ; La Cigale de Nyons ;  Ivrensemble, le bar des Glycines et du St Julien à Buis-les-Baronnies, Festival du Maquis à St Auban, Le Perroquet à Montpellier…
+
+",
+  socials: {
+    instagram: '#',
+    facebook: '#'
+  },
+  ticket_url: 'https://www.helloasso.com/associations/association-oh-petard/evenements/concert-oh-petard-festival?_gl=1%2ansd0f6%2a_gcl_au%2aNTEwNTE3MDEyLjE3NTQ0NjM2MDYuMzQ5NzY4NjQ5LjE3NTUxMjAwMDMuMTc1NTEyMDAwMg'
+}) %}
+
+
+	{# === Données par défaut (au cas où rien n'est passé depuis le contrôleur) === #}
+	{% set artist2 = artist2|default({
+  name: 'Chalawan',
+  photo: asset('assets/artistes/Chalawan2.jpg'),
+  alt: 'Photo de l’artiste',
+  time: '<span class="number">10h.16h</span>',
+  place: 'Place aux herbes',
+  price_value: '<span class="number">Gratuit</span>',
+  bio: "DJ Chalawan mix depuis plus de 20 ans à travers la France. Ses sets éclectiques agrémentés de scratchs incisifs font bouger tous les dancefloor. Venant du hip-hop et de la funk, il joue aussi bien de l'électro de la house, du ragga, de la jungle que des musiques latinos ou brésiliennes. ... DJ résident de l'antirouille club à Montpellier, il est aussi à l'origine de la caravane guinguette le buffet sonore avec son compère spoilt bastard qui parcourt la France entière depuis 2019.
+Il s’est produit avec : ASSASSIN, RAEKWON (Wu-Tang), dj JAMES, dj NAUGHTY J (NTM), dj DEE NASTY, dj LIGONE (champion du monde DMC 2011), JFB (champion DMC), A SKILLZ , KDS, ANTIPOP CONSORTIUM, AFU RA,BIGA RANX, 69 DB, MAËLSTROM, dj PANIK, THE UNIK, HABSTRAKT, CRYSTAL DISTORTION, MANU LE MALIN, TORGULL…
+
+",
+  socials: {
+    instagram: '#',
+    facebook: '#'
+  },
+  ticket_url: 'https://www.helloasso.com/associations/association-oh-petard/evenements/concert-oh-petard-festival?_gl=1%2ansd0f6%2a_gcl_au%2aNTEwNTE3MDEyLjE3NTQ0NjM2MDYuMzQ5NzY4NjQ5LjE3NTUxMjAwMDMuMTc1NTEyMDAwMg'
+}) %}
+
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-musique.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-musique.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+
+	<section class="container py-5 artist-page mt-4">
+		<div
+			class="row g-4 align-items-stretch">
+
+			{# PHOTO À GAUCHE #}
+			<div class="col-12 col-lg-5 d-flex">
+				<div class="rounded-3 overflow-hidden shadow-light w-100 h-100">
+					<img src="{{ artist.photo }}" alt="{{ artist.alt }}" class="w-100 h-100" style="object-fit:cover;">
+				</div>
+			</div>
+
+			{# INFOS À DROITE #}
+			<div class="col-12 col-lg-7 d-flex flex-column justify-content-center">
+				<header class="mb-2">
+					<h1 class="artist-title">{{ artist.name|raw }}</h1>
+				</header>
+
+				{# Chips colorées : texte blanc #}
+				<div class="chips d-flex flex-wrap gap-2 mb-3">
+					<span class="chip bg-blue text-white">
+						{{ artist.time|raw }}</span>
+					<span class="chip bg-green text-white">
+						{{ artist.place }}</span>
+					<span class="chip bg-red text-white">
+						{{ artist.price_value|raw }}</span>
+				</div>
+
+				<article class="artist-bio mb-4">
+					<p class="m-0">{{ artist.bio }}</p>
+				</article>
+
+				{# Réseaux sociaux + billetterie #}
+				<div class="d-flex align-items-center justify-content-start gap-3 mt-3">
+					<a href="https://www.instagram.com/naro_sound/" target="_blank" rel="noopener noreferrer">
+						<i class="fa-brands fa-square-instagram fa-2x"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="container py-5 artist-page mt-4">
+		<div
+			class="row g-4 align-items-stretch">
+
+			{# INFOS À DROITE #}
+			<div class="col-12 col-lg-7 d-flex flex-column justify-content-center">
+				<header class="mb-2">
+					<h1 class="artist-title">{{ artist2.name|raw }}</h1>
+				</header>
+
+				{# Chips colorées : texte blanc #}
+				<div class="chips d-flex flex-wrap gap-2 mb-3">
+					<span class="chip bg-blue text-white">
+						{{ artist2.time|raw }}</span>
+					<span class="chip bg-green text-white">
+						{{ artist2.place }}</span>
+					<span class="chip bg-red text-white">
+						{{ artist2.price_value|raw }}</span>
+				</div>
+
+				<article class="artist-bio mb-4">
+					<p class="m-0">{{ artist2.bio }}</p>
+				</article>
+
+				{# Réseaux sociaux + billetterie #}
+				<div class="d-flex align-items-center justify-content-start gap-3 mt-3">
+					<a href="https://www.instagram.com/dj_chalawan/" target="_blank" rel="noopener noreferrer">
+						<i class="fa-brands fa-square-instagram fa-2x"></i>
+					</a>
+					<a href="https://www.facebook.com/people/DJ-Chalawan/100040158713247/" target="_blank" rel="noopener noreferrer">
+						<i class="fa-brands fa-square-facebook fa-2x"></i>
+					</a>
+				</div>
+			</div>
+
+			{# PHOTO À GAUCHE #}
+			<div class="col-12 col-lg-5 d-flex">
+				<div class="rounded-3 overflow-hidden shadow-light w-100 h-100">
+					<img src="{{ artist2.photo }}" alt="{{ artist2.alt }}" class="w-100 h-100" style="object-fit:cover;">
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+
+	<section class="zones-texte bandeau-good-inscription py-3 text-center">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+			<span class="event">good food</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="spot">good ride</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="sector">good music</span>
+		</h3>
+	</section>
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_musique_prog')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+
+
+	<style>
+		/* ---------- Page artiste : réglages typographiques + équilibre ---------- */
+		.artist-page .artist-title {
+			font-family: var(--font-title);
+			font-weight: 700;
+			line-height: 1.1;
+			font-size: clamp(1.6rem, 2.2vw + 1rem, 2.3rem); /* plus petit que display-6 */
+			letter-spacing: 0.5px;
+			margin: 0;
+		}
+
+		.artist-page .artist-bio {
+			font-size: clamp(1rem, 0.4vw + 0.9rem, 1.1rem); /* bio plus sobre */
+			line-height: 1.6;
+			color: var(--color-blue-dark);
+		}
+
+		/* ---------- Chips (heure / lieu / tarif) ---------- */
+		.artist-page .chips .chip {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.5rem 0.75rem;
+			border-radius: var(--border-radius);
+			font-family: var(--font-title);
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 0.95rem;
+			box-shadow: var(--shadow-light);
+		}
+		.artist-page .text-white {
+			color: #fff !important;
+		}
+
+		/* ---------- Boutons réseaux minimalistes ---------- */
+		.artist-page .btn-social {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-family: var(--font-title);
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 0.95rem;
+			padding: 0.5rem 0.75rem;
+			border-radius: var(--border-radius);
+			background: var(--color-blue-dark);
+			color: #fff;
+			box-shadow: var(--shadow-light);
+			transition: var(--transition);
+		}
+		.artist-page .btn-social:hover {
+			background: var(--color-blue-light);
+			color: #fff;
+		}
+		.artist-page .btn-social i {
+			font-size: 1.25rem;
+			line-height: 1;
+		}
+
+		/* ---------- Responsive petits écrans ---------- */
+		@media(max-width: 767.98px) {
+			.artist-page .chips .chip {
+				font-size: 0.9rem;
+			}
+			.artist-page .btn-social {
+				font-size: 0.9rem;
+			}
+		}
+	</style>
+
+{% endblock %}
