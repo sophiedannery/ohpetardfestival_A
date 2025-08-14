@@ -15,39 +15,91 @@
 	</section>
 
 
-	<div class="text-center  mt-5">
-		<h1 class="number">SAMEDI 27 SEPT
-			<br>
-			LA PALUN, BUIS-LES-BARONNIES
-			<br>
-			20H30 - 3h00
-			<br>
-			12 €
-		</h1>
-	</div>
+	<section class="zones-texte bandeau-good-inscription py-3 text-center mt-4">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+			<span class="event">SAM
+				<span class="number">27</span>
+				SEPT</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="spot">LA PALUN, BLB</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="sector">
+				<span class="number">20h30.03h00</span>
+			</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="event">
+				<span class="number">12€</span>
+			</span>
+		</h3>
+
+		<div class="mt-5 text-center">
+			<a href="https://www.helloasso.com/associations/association-oh-petard/evenements/concert-oh-petard-festival?_gl=1%2ansd0f6%2a_gcl_au%2aNTEwNTE3MDEyLjE3NTQ0NjM2MDYuMzQ5NzY4NjQ5LjE3NTUxMjAwMDMuMTc1NTEyMDAwMg" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Billetterie</a>
+		</div>
+
+	</section>
 
 
-	<section class="section-adherer position-relative py-0 py-md-5 mb-5 mb-md-0">
-		<div class="container">
+	<section class="container my-5" id="artistes">
+		<div class="row g-4">
+			{% set artists = [
+      { name:'ZULU PROJECT', time:'<span class="number">20h30</span>', slug:'zulu-project', img:asset('assets/artistes/Zuluproject.jpeg'), alt:'Zulu Project' },
+      { name:'JOUBe', time:'<span class="number">22h30</span>', slug:'joube', img:asset('assets/artistes/Joube.webp'), alt:'JOUBe' },
+      { name:'SECRET GUEST', time:'<span class="number">23h30</span>', slug:'secret', img:asset('assets/artistes/Surprise.jpg'), alt:'Secret Guest' },
+            { name:'KRIS <span class="number">10</span>', time:'<span class="number">1h</span>', slug:'kris10', img:asset('assets/artistes/kris10.jpg'), alt:'KRIS 10' }
+    ] %}
 
-
-			<div class="adhesion-box text-center p-5 p-md-5">
-
-				<div class="lineup-text text-yellow-light">
-					<div class="lineup-big mb-4">SECRET GUEST</div>
-					<div class="lineup-medium mb-4">JOUBE * KRIS
-						<span class="number">10</span>
-					</div>
-					<div class="lineup-small mb-4">ZULU PROJECT</div>
+			{% for a in artists %}
+				<div class="col-12 col-sm-6 col-lg-3">
+					<a href="/artiste/{{ a.slug }}" class="artist-card d-block position-relative overflow-hidden" aria-label="Ouvrir la page de {{ a.alt }}">
+						<img src="{{ a.img }}" alt="{{ a.alt }}" class="w-100" loading="lazy">
+						<div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+							<h3 class="text-white text-center px-2 m-0">{{ a.name|raw }}</h3>
+							<p class="text-white m-0">{{ a.time|raw }}</p>
+						</div>
+					</a>
 				</div>
-
-				<a href="https://www.helloasso.com/associations/association-oh-petard/evenements/concert-oh-petard-festival?_gl=1%2ansd0f6%2a_gcl_au%2aNTEwNTE3MDEyLjE3NTQ0NjM2MDYuMzQ5NzY4NjQ5LjE3NTUxMjAwMDMuMTc1NTEyMDAwMg" target="_blank" rel="noopener noreferrer" class="btn btn-secondary me-4">Billetterie</a>
-			</div>
-
-			{# <img src="{{ asset('assets/images/micro.png')}}" alt="Illustration micro" class="illu-micro"> #}
-
+			{% endfor %}
 		</div>
 	</section>
+
+	<style>
+		/* même taille pour toutes les images */
+		#artistes .artist-card img {
+			aspect-ratio: 1 / 1; /* carré */
+			object-fit: cover;
+			transform: scale(1); /* pour l'anim */
+			transition: transform 0.35s ease;
+			display: block;
+		}
+
+		/* overlay toujours visible */
+		#artistes .artist-card .overlay {
+			background: rgba(0, 0, 0, 0.45);
+			transition: background 0.35s ease;
+		}
+
+		/* hover/focus : zoom léger + overlay un peu plus dense */
+		#artistes .artist-card:hover img,
+		#artistes .artist-card:focus img,
+		#artistes .artist-card:focus-visible img {
+			transform: scale(1.05);
+		}
+		#artistes .artist-card:hover .overlay,
+		#artistes .artist-card:focus .overlay,
+		#artistes .artist-card:focus-visible .overlay {
+			background: rgba(0, 0, 0, 0.6);
+		}
+
+		/* accessibilité focus */
+		#artistes .artist-card {
+			outline: none;
+		}
+		#artistes .artist-card:focus-visible {
+			box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25), 0 0 0 0.5rem rgba(13, 110, 253, 0.5);
+			border-radius: 0.75rem;
+		}
+	</style>
+
 
 	<div class="text-center">
 		<h1>Et du son pour tout le monde pendant tout le festival :</h1>
@@ -72,13 +124,15 @@
 				<div class="col-12 col-md-8 px-4 mx-md-0">
 
 					<div class="prog-event mb-4  mt-5 mt-md-0">
+
 						<h5 class="prog-event-title mb-3">Zulu Project</h5>
+
 						<p class="m-0">
 							<span class="prog-horaire me-2">22h - 00h</span><br class="d-block d-md-none">
 							Dj Set
 						</p>
 						<p class="prog-event-location m-0">📍 Ivr'Ensemble</p>
-						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a> #}
+						<a href="{{ path('app_artiste_zuluproject')}}" class="prog-event-link mt-2">Découvre l'artiste</a>
 					</div>
 
 				</div>
@@ -105,13 +159,13 @@
 				<div class="col-12 col-md-8 px-4 mx-md-0">
 
 					<div class="prog-event mb-4  mt-5 mt-md-0">
-						<h5 class="prog-event-title mb-3">Narosound // Chalawan</h5>
+						<h5 class="prog-event-title mb-3">NaroSound // Chalawan</h5>
 						<p class="m-0">
 							<span class="prog-horaire me-2">10h - 16h</span><br class="d-block d-md-none">
 							Dj Set
 						</p>
 						<p class="prog-event-location m-1">📍 Place aux herbes</p>
-						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a> #}
+						<a href="{{ path('app_artiste_narosound_chalawan')}}" class="prog-event-link mt-2">Découvre les artistes</a>
 					</div>
 
 
@@ -124,11 +178,12 @@
 							DJ Set
 						</p>
 						<p class="prog-event-location m-1">📍 Place aux herbes</p>
-						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a> #}
+						<a href="{{ path('app_artiste_kris10')}}" class="prog-event-link mt-2">Découvre l'artiste</a>
 					</div>
 
 					<div class="prog-event mb-4  mt-5 ">
-						<h5 class="prog-event-title mb-3">Tracto'sono</h5>
+						<h5 class="prog-event-title">Tracto'sono</h5>
+						<p class="mt-0">by Hans le Balourd</p>
 						<p class="m-0">
 							<span class="prog-horaire me-2">19h - 20h15</span><br class="d-block d-md-none">
 							Musique nomade
@@ -136,29 +191,6 @@
 						<p class="prog-event-location m-1">📍 De la Place aux herbes jusqu'à La Palun</p>
 						<a href="{{ path('app_tracto')}}" class="prog-event-link mt-2">C'est quoi la Tracto'sono ?</a>
 					</div>
-
-
-					{# <div class="prog-event mb-4  mt-5">
-																																									<h5 class=" prog-event-title mb-3">
-																																										Et toute la jounée, Street Food Locale :
-																																									</h5>
-																																									<div class="row text-center">
-																																										<div class="col-12 col-md-6 ">
-																																											<div class="date-restau-prog mb-4 ">
-																																												<h4 class="m-0 lineup-text">
-																																													<span class="number ms-1">9h - 18h</span>Place aux herbes
-																																												</h4>
-																																											</div>
-																																										</div>
-																																										<div class="col-12 col-md-6 ">
-																																											<div class="date-restau-prog mb-4 ">
-																																												<h4 class="m-0 lineup-text">
-																																													<span class="number ms-1">20h - 1h</span>La Palun
-																																												</h4>
-																																											</div>
-																																										</div>
-																																									</div>
-																																								</div> #}
 
 
 				</div>
