@@ -18,7 +18,6 @@
 
 	<section class="container inscription py-5">
 
-
 		<section class="zones-texte bandeau-good-inscription py-3 text-center">
 			<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
 				<span class="event">nouvel événement</span>
@@ -29,9 +28,7 @@
 			</h3>
 		</section>
 
-
 		<div class="row g-4 align-items-start align-items-center justify-content-center mt-5">
-
 			<div class="col-md-6">
 				<div class="info-box p-4 h-100">
 
@@ -41,7 +38,7 @@
 							📍
 							<strong>800m</strong>
 							de parcours, navette pour remonter et récompences à la clé.</p>
-						<p class="text-small">Equipement de sécurité obligatoire (<a href="#">voir le réglement</a>).</p>
+						<p class="text-small">Equipement de sécurité obligatoire (<a href="{{ asset('assets/docs/REGLEMENT_DH_URBAINE_2025.pdf') }}" target="_blank" rel="noopener noreferrer">voir le réglement</a>).</p>
 
 						<div class="text-start mt-3">
 							<p class="small-text">
@@ -52,11 +49,7 @@
 								<strong>obligatoire</strong>
 							</p>
 						</div>
-
-						<a href="#" class="link-more-yellow">En savoir plus sur la DH urbaine</a>
 					</div>
-
-
 				</div>
 			</div>
 
@@ -79,14 +72,39 @@
 							→ Descente + repas + concert</li>
 					</ul>
 				</div>
-
 				<a href="https://www.helloasso.com/associations/association-oh-petard/boutiques/inscription-challenge-dh-urbaine-oh-petard-festival" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
 					Je m'inscris
 				</a>
+			</div>
+		</div>
 
 
+		<section class="zones-texte bandeau-good-inscription py-3 text-center mt-5 mt-md-1">
+			<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+				<span class="spot">INFOS PARCOURS !</span>
+			</h3>
+		</section>
+
+
+		<div class="row g-4 justify-content-center mt-1">
+
+			<div class="col-12 col-md-10 col-lg-8 mx-auto">
+				<img src="{{ asset('assets/plans/Plan_DH_urbaine_2025.jpg') }}" alt="Plan du parcours DH Urbaine 2025" class="img-fluid d-block mx-auto rounded shadow mb-4" loading="lazy">
 			</div>
 
+			<div class="col-12 col-md-8 mx-auto">
+				<div class="info-box p-4 h-100 text-center">
+					<p>
+						Nous utiliserons au maximum les infrastructures déjà présentes dans le village, le tout, agrémenté de modules en bois (petits et moyens sauts, virages relevés dont un de 17 m !).
+						<br>Il y a également des passages dans des petites ruelles et escaliers.
+						<br>Le parcours a été pensé de façon à ce qu'il soit accessible à tous les niveaux. Nous prévoyons donc des échappatoires pour les personnes qui ne se sentent pas en capacité de passer certains modules.
+						<br>L'objectif est de passer un bon moment tous ensemble, sans se faire peur, dans la joie et la bonne humeur ✨
+					</p>
+					<p class="text-small">
+						<a href="{{ asset('assets/docs/Plan_DH_urbaine_2025.pdf') }}" download>Télécharge le plan</a>
+					</p>
+				</div>
+			</div>
 
 		</div>
 
